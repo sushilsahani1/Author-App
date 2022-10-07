@@ -1,4 +1,13 @@
 <form action="/authors"method="GET">
-    <label>Name</label><br>
-    <input type="search"name="name"value="">
-</form>
+    <label>Name</label><br><br>
+    <input type="text"name="name"value="<%=searchOptions.name%>">
+    <button type="submit">Search</button>
+</form><br>
+<% authors.forEach(author => { %>
+   <div><%= author.name %></div>
+   <a href="/authors/<%= author.id %>">View</a>
+   <a href="/authors/<%= author.id %>/edit">Edit</a>
+    <form method="POST"action="/authors/<%=author.id%>?_method=DELETE">
+        <button type="submit">Delete</button>
+    </form>
+<% }) %>    
