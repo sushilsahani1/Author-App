@@ -1,1 +1,14 @@
-Books
+<h2>Search Book</h2>
+<form action="/books"method="GET">
+
+    <label>Title</label>
+    <input type="text"name="title"value="<%=searchOptions.title%>"><br>
+
+    <label>PublishedBefore</label>
+    <input type="text" name="publishBefore"value="<%=searchOptions.publishedBefore%>">
+    
+    <label>PublishedAfter</label>
+    <input type="text" name="publishAfter"value="<%=searchOptions.publishedAfter%>">
+</form>
+
+<%- include('../partials/bookGrid.ejs',{books : books, large : true}) %>
