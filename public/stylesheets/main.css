@@ -3,8 +3,8 @@ body{
 }
 
 :root {
-    --book-cover-width: 200px;
-    --book-cover-width-large: 325px;
+    --book-cover-width: 180px;
+    --book-cover-width-large: 200px;
     --book-cover-aspect-ratio: 0.75;
   }
   
